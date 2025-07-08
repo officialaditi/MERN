@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
+    "bcrypt": "^6.0.0",
     "colors": "^1.4.0",
     "dotenv": "^17.0.1",
     "express": "^5.1.0",
@@ -16,7 +17,9 @@
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
     "client": "npm run dev --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder"
   },
   "keywords": [
     "express.js",
